@@ -26,6 +26,11 @@ constexpr LoopScheduler make_default_loop_scheduler()
 #endif // if CK_EXPERIMENTAL_DEFAULT_TO_INTER_WAVE_SCHEDULING
 }
 
+constexpr LoopScheduler make_interwave_loop_scheduler()
+{
+    return LoopScheduler::Interwave;
+}
+
 } // namespace ck
 
 #if !defined(__HIPCC_RTC__) || !defined(CK_CODE_GEN_RTC)
